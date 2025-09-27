@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Priyanshu Kansal </title>
+  <meta name="title" content="Priyanshu Kansal - Developer & AI/ML Enthusiast">
+  <meta name="description" content="Portfolio of Priyanshu Kansal, a 4th-year B.Tech IT Student, AI/ML & Web Developer.">
+
+  <link rel="shortcut icon" href="./P_logo.png" type="image/svg+xml">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+  <link rel="preload" as="image" href="./assets/images/hero-banner.jpg">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <style>
+/* ---------- Project Card ---------- */
+.project-card {
+  background-color: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  transition: transform 0.3s, box-shadow 0.3s;
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  min-height: 360px;
+  max-width: 1100px;
+  margin: 0 auto 2rem;
+  cursor: pointer;
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+}
+
+.card-content {
+  flex: 1;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.card-banner {
+  flex: 0 0 350px;
+  overflow: hidden;
+  position: relative;
+}
+
+.card-banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s;
+}
+
+.project-card:hover img {
+  transform: scale(1.05);
+}
+
+.card-tag {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.btn-text {
+  margin-top: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  transition: color 0.3s;
+}
+
+.btn-text:hover {
+  color: #3f78e0;
+}
+
+.btn-text ion-icon {
+  margin-left: 0.5rem;
+}
+
+/* Accent colors */
+.violet { color: #a07cc5; }
+.green  { color: #7cb798; }
+.pink   { color: #d16b86; }
+.blue   { color: #3f78e0; }
+.teal   { color: #42a678; }
+
+/* Responsive Project Layout */
+@media (max-width: 992px) {
+  .project-card {
+    flex-direction: column;
+    min-height: auto;
+  }
+  .card-banner {
+    flex: none;
+    width: 100%;
+    height: 220px;
+  }
+}
+
+@media (max-width: 600px) {
+  .card-content {
+    padding: 1rem;
+  }
+  .card-banner {
+    height: 180px;
+  }
+  .btn-text {
+    font-size: 0.9rem;
+  }
+}
+
+/* ---------- Experience Section ---------- */
+.experience .section-title,
+.experience .section-text {
+  text-align: left;
+  margin-bottom: 1.5rem;
+}
+
+.experience-card {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  gap: 2rem;
+  background-color: #f0f4f8;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  margin: 2rem 0;
+}
+
+.experience-text {
+  flex: 1;
+  padding: 2rem;
+}
+
+.experience-text .card-tag {
+  color: #ff7f50;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+}
+
+.experience-text .duration {
+  margin: 0 0 1rem;
+  font-style: italic;
+  color: #555;
+}
+
+.experience-image {
+  flex: 0 0 350px;
+  overflow: hidden;
+}
+
+.experience-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Responsive Experience Layout */
+@media (max-width: 992px) {
+  .experience-card {
+    flex-direction: column;
+  }
+  .experience-image {
+    flex: none;
+    width: 100%;
+    height: 220px;
+  }
+}
+
+/* ---------- Footer ---------- */
+.footer {
+    /* background-color: #111; */
+    background-color: var(--white);
+    margin: 0px 50px 25px 50px;
+    color: var(--charcoal);
+    /* background-color: var(--white); */
+    padding: 2rem 1rem;
+    margin-top: 3rem;
+    text-align: center;
+    box-shadow: var(--shadow-1);
+}
+
+.footer .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.footer .social-list {
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer .social-link {
+  color: var(--charcoal);
+  font-size: 1.2rem;
+  transition: color 0.3s;
+}
+
+.footer .social-link:hover {
+  color: #3f78e0;
+}
+.navbar-top {
+  margin-left: -5px; /* This is good practice to vertically center the item */
+}
+</style>
+
+
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header class="header" data-header>
+    <div class="container">
+      <a href="#" class="logo">
+        <img src="./assets/images/logo-dark.png" width="200" height="100" alt="Priyanshu Portfolio">
+      </a>
+
+      <nav class="navbar" data-navbar>
+        <div class="navbar-top">
+          <a href="#" class="logo">
+            <img src="./assets/images/logo-light.png" width="100" height="200" alt="Priyanshu Portfolio">
+          </a>
+          <button class="nav-close-btn" aria-label="close menu" data-nav-toggler>
+            <ion-icon name="close-outline" aria-hidden="true"></ion-icon>
+          </button>
+        </div>
+
+        <ul class="navbar-list">
+          <li><a href="#about" class="navbar-link">About</a></li>
+          <li><a href="#projects" class="navbar-link">Projects</a></li>
+          <li><a href="#contact" class="navbar-link">Contact</a></li>
+        </ul>
+
+        <div class="wrapper">
+          <a href="mailto:priyanshukansal15@gmail.com" class="contact-link">priyanshukansal15@gmail.com</a>
+          <a href="tel:+919289292542" class="contact-link">+91 9289292542</a>
+        </div>
+
+        <ul class="social-list">
+          <li><a href="https://github.com/priyanshukansal15" class="social-link"><ion-icon name="logo-github"></ion-icon></a></li>
+          <li><a href="https://www.linkedin.com/in/priyanshu-kansal-48b0b7193/" class="social-link"><ion-icon name="logo-linkedin"></ion-icon></a></li>
+          <!-- <li><a href="#"><i class="fa-brands fa-leetcode"></i></a></li> -->
+        </ul>
+      </nav>
+
+      <button class="nav-open-btn" aria-label="open menu" data-nav-toggler>
+        <ion-icon name="menu-outline" aria-hidden="true"></ion-icon>
+      </button>
+
+      <div class="overlay" data-nav-toggler data-overlay></div>
+    </div>
+  </header>
+
+  <main>
+    <article>
+
+      <!-- HERO -->
+      <section class="section hero" aria-label="home">
+        <div class="container">
+          <figure class="hero-banner">
+            <img src="./assets/images/hero-banner.jpg" width="100" height="100" alt="Priyanshu" class="w-100"
+              data-reveal="top">
+          </figure>
+
+          <div class="hero-content">
+            <h1 class="h1 hero-title" data-reveal="top" data-reveal-delay="0.5s">
+              Design. Code. Create.
+            </h1>
+            <p class="section-text" data-reveal="top" data-reveal-delay="0.75s">
+              Hi there! I love building smart, intuitive applications and have a deep passion for both Artificial Intelligence and modern Web Development.
+            </p>
+
+            <div class="btn-wrapper" data-reveal="top" data-reveal-delay="1s">
+              <a href="#projects" class="btn btn-primary">See My Works</a>
+              <a href="#contact" class="btn btn-secondary">Contact Me</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ABOUT -->
+      <section class="section about" aria-label="about" id="about">
+        <div class="container">
+          <div class="wrapper">
+            <div data-reveal="left">
+              <h2 class="h2 section-title">About Me</h2>
+              <p class="section-text">
+                I am Priyanshu Kansal, a 4th-year B.Tech IT student at BPIT (affiliated with GGSIPU) with experience in AI/ML, web development, and robotics. I have worked on projects like violence detection systems, digital governance platforms, and smart IoT solutions.
+              </p>
+            </div>
+                <!-- Skills Progress (kept original design) -->
+                <ul class="progress-list" data-reveal="right">
+                  <li class="progress-item">
+                    <div class="label-wrapper"><p>Web Development</p><span class="span">85 %</span></div>
+                    <div class="progress"><div class="progress-fill" style="width: 85%; background-color: #8caeec"></div></div>
+                  </li>
+                  <li class="progress-item">
+                    <div class="label-wrapper"><p>Problem Solving</p><span class="span">75 %</span></div>
+                    <div class="progress"><div class="progress-fill" style="width: 75%; background-color: #c7b1dd"></div></div>
+                  </li>
+                  <li class="progress-item">
+                    <div class="label-wrapper"><p>Object Detection in ML</p><span class="span">90 %</span></div>
+                    <div class="progress"><div class="progress-fill" style="width: 90%; background-color: #b0d4c1"></div></div>
+                  </li>
+                  <li class="progress-item">
+                    <div class="label-wrapper"><p>Frontend for Website UI</p><span class="span">80 %</span></div>
+                    <div class="progress"><div class="progress-fill" style="width: 80%; background-color: #8caeec"></div></div>
+                  </li>
+                  <li class="progress-item">
+                    <div class="label-wrapper"><p>Core Subjects Knowledge</p><span class="span">80 %</span></div>
+                    <div class="progress"><div class="progress-fill" style="width: 80%; background-color: #e3a6b6"></div></div>
+                  </li>
+                  <li class="progress-item">
+                    <div class="label-wrapper"><p>IoT</p><span class="span">70 %</span></div>
+                    <div class="progress"><div class="progress-fill" style="width: 70%; background-color: #f7c873"></div></div>
+                  </li>
+                </ul>
+          </div>
+        </div>
+      </section>
+<!-- Experience Section -->
+<section class="section experience" id="experience" aria-label="experience">
+  <div class="container">
+
+    <!-- Section Title -->
+    <div data-reveal="top">
+      <h2 class="h2 section-title">Experience</h2>
+      <p class="section-text">
+        Professional experience and internships showcasing my skills in AI/ML and development.
+      </p>
+    </div>
+
+    <!-- BEL Internship Card -->
+    <div class="experience-card" data-reveal="bottom">
+
+      <!-- Card Content -->
+      <div class="experience-text">
+        <p class="card-tag">Machine Learning Intern</p>
+        <h3 class="h4 card-title">Bharat Electronics Ltd.</h3>
+        <p class="duration">July 2024 – August 2024</p>
+        <p class="card-text">
+          Worked as a Machine Learning Intern at Bharat Electronics Limited (BEL), a unit under the Ministry of Defence, 
+          on real-time violence detection in videos using YOLOv8, CUDA, and OpenCV. Developed and optimized 
+          frame-by-frame video processing pipelines for accurate detection, implemented GPU-accelerated computation 
+          for faster inference, and presented detailed results and performance analysis to senior engineers. 
+          The project enhanced surveillance capabilities and demonstrated practical application of AI/ML 
+          in defense-related systems.
+        </p>
+        <a href="YOUR_CERTIFICATE_LINK_HERE" target="_blank" class="btn-text">
+          <span>View Certificate</span>
+          <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
+        </a>
+      </div>
+
+      <!-- Card Image -->
+      <figure class="experience-image">
+        <img src="./assets/images/bel-internship.avif" loading="lazy" alt="BEL Internship">
+      </figure>
+
+    </div>
+
+  </div>
+</section>
+
+
+
+<!-- PROJECTS -->
+<section class="section project" aria-labelledby="project-label" id="projects">
+  <div class="container">
+
+    <div class="title-wrapper" data-reveal="top">
+      <div>
+        <h2 class="h2 section-title" id="project-label">Latest Projects</h2>
+        <p class="section-text">Check out some of my latest projects.</p>
+      </div>
+    </div>
+
+    <ul class="grid-list" style="display: flex; flex-direction: column; gap: 2rem; list-style: none; padding: 0;">
+
+      <!-- Violence Detection -->
+      
+
+      <!-- Urban Governance -->
+      <li>
+        <div class="project-card">
+          <div class="card-content">
+            <p class="card-tag green">Blockchain & GIS</p>
+            <h3 class="h3 card-title">Urban Governance Platform</h3>
+            <p class="card-text">
+              Digital platform for inter-departmental cooperation using Hyperledger Fabric & Google Maps API. Streamlines city governance and resource planning.
+            </p>
+            <a href="https://interlinked-gray.vercel.app/" target="_blank" class="btn-text green">View Project <ion-icon name="arrow-forward-outline"></ion-icon></a>
+          </div>
+          <figure class="card-banner">
+            <img src="./assets/images/urban-platform.png.webp" loading="lazy" alt="Urban Governance Platform">
+          </figure>
+        </div>
+      </li>
+
+      <!-- Waultz -->
+      <li>
+        <div class="project-card">
+          <div class="card-content">
+            <p class="card-tag pink">Blockchain & LegalTech</p>
+            <h3 class="h3 card-title">Waultz</h3>
+            <p class="card-text">
+              Blockchain-powered platform for secure and transparent legal document management. Finalist in Smart India Hackathon 2023.
+            </p>
+            <a href="https://waultz.vercel.app/" target="_blank" class="btn-text pink">View Project <ion-icon name="arrow-forward-outline"></ion-icon></a>
+          </div>
+          <figure class="card-banner">
+            <img src="./assets/images/waultz.jpeg" loading="lazy" alt="Waultz Project">
+          </figure>
+        </div>
+      </li>
+
+      <!-- Malhaar -->
+      <li>
+        <div class="project-card">
+          <div class="card-content">
+            <p class="card-tag blue">Web Development</p>
+            <h3 class="h3 card-title">Malhaar - College Fest Website</h3>
+            <p class="card-text">
+              Official website for college fest showcasing events, schedules, and projects. Built with responsive design and intuitive UI.
+            </p>
+            <a href="https://malhaar.bpitindia.ac.in/" target="_blank" class="btn-text blue">View Project <ion-icon name="arrow-forward-outline"></ion-icon></a>
+          </div>
+          <figure class="card-banner">
+            <img src="./assets/images/college-fest.webp" loading="lazy" alt="College Fest Website">
+          </figure>
+        </div>
+      </li>
+
+      <li>
+        <div class="project-card">
+          <div class="card-content">
+            <p class="card-tag violet">ML & AI</p>
+            <h3 class="h3 card-title">Violence Detection System</h3>
+            <p class="card-text">
+              Real-time violence detection using YOLOv8 and CUDA for video analysis. Optimized for speed and accuracy in surveillance systems.
+            </p>
+            <a href="https://drive.google.com/drive/folders/1y2he-cwBz37ly36_vSPCRhS2zYI6M7Tu?usp=sharing" target="_blank" class="btn-text violet">View Project <ion-icon name="arrow-forward-outline"></ion-icon></a>
+          </div>
+          <figure class="card-banner">
+            <img src="./assets/images/violence-detection.png" loading="lazy" alt="Violence Detection">
+          </figure>
+        </div>
+      </li>
+
+      <!-- FOREST -->
+      <li>
+        <div class="project-card">
+          <div class="card-content">
+            <p class="card-tag teal">Sustainable Tech</p>
+            <h3 class="h3 card-title">FOREST</h3>
+            <p class="card-text">
+              Nature-inspired, self-sustained residential system integrating renewable energy, smart irrigation, terrace farming, and automation for eco-friendly urban living.
+            </p>
+            <a href="https://drive.google.com/drive/folders/1--KHPEUT82n3bjX_ShKimBouFx1Cmw31" target="_blank" class="btn-text teal">View Project <ion-icon name="arrow-forward-outline"></ion-icon></a>
+          </div>
+          <figure class="card-banner">
+            <img src="./assets/images/forest.png" loading="lazy" alt="FOREST Project">
+          </figure>
+        </div>
+      </li>
+
+    </ul>
+  </div>
+</section>
+
+<!-- <style>
+  .project-card {
+    background-color: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    min-height: 370px;
+    cursor: pointer;
+  }
+  .project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+  }
+  .card-content {
+    flex: 1;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .card-banner {
+    flex: 1;
+    min-width: 350px;
+    overflow: hidden;
+    position: relative;
+  }
+  .card-banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s;
+  }
+  .project-card:hover img {
+    transform: scale(1.05);
+  }
+  .card-tag {
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+  .btn-text {
+    margin-top: 1rem;
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+  }
+  .btn-text ion-icon {
+    margin-left: 0.5rem;
+  }
+
+  /* Accent colors */
+  .violet { color: #a07cc5; }
+  .green { color: #7cb798; }
+  .pink { color: #d16b86; }
+  .blue { color: #3f78e0; }
+  .teal { color: #42a678; }
+  
+</style>
+ -->
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <p class="copyright">© 2025 Priyanshu Kansal. All rights reserved.</p>
+      <ul class="social-list">
+        <li><a href="https://github.com/priyanshukansal15" class="social-link"><ion-icon name="logo-github"></ion-icon></a></li>
+        <li><a href="https://www.linkedin.com/in/priyanshu-kansal-48b0b7193/" class="social-link"><ion-icon name="logo-linkedin"></ion-icon></a></li>
+        <!-- <li><a href="#" class="social-link"><ion-icon name="logo-twitter"></ion-icon></a></li>
+        <li><a href="#" class="social-link"><ion-icon name="logo-instagram"></ion-icon></a></li> -->
+      </ul>
+    </div>
+  </footer>
+
+  <script src="./assets/js/script.js"></script>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+</html>
