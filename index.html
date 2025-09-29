@@ -181,6 +181,96 @@
   }
 }
 
+/* ---------- Contact Section ---------- */
+.contact-content {
+  display: grid;
+  gap: 2.5rem;
+}
+
+@media (min-width: 992px) {
+  .contact-content {
+    grid-template-columns: 1fr 1.2fr;
+    align-items: center;
+    gap: 4rem;
+  }
+}
+
+.contact-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 2rem;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.2rem;
+}
+
+.contact-item ion-icon {
+  font-size: 1.6rem;
+  color: var(--blue-crayola); /* Using a variable from your stylesheet */
+}
+
+.contact-link {
+  color: var(--charcoal);
+  text-decoration: none;
+  font-style: normal;
+  transition: color 0.3s;
+}
+
+.contact-link:hover {
+  color: var(--blue-crayola);
+}
+
+.contact-form .input-wrapper {
+  display: grid;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 600px) {
+  .contact-form .input-wrapper {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.input-field {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  font-family: 'Manrope', sans-serif;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #f0f4f8;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.input-field:focus {
+  outline: none;
+  border-color: var(--blue-crayola);
+  box-shadow: 0 0 0 3px hsla(220, 96%, 58%, 0.2);
+}
+
+.contact-form textarea.input-field {
+  resize: vertical;
+  min-height: 150px;
+  margin-bottom: 1rem;
+}
+
+/* This rule centers the text inside the button */
+.contact-form .btn {
+  justify-content: center;
+}
+
+/* This wrapper centers the button element itself on ALL screen sizes */
+.form-btn-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+
 /* ---------- Footer ---------- */
 .footer {
     /* background-color: #111; */
@@ -228,7 +318,6 @@
 
 <body>
 
-  <!-- HEADER -->
   <header class="header" data-header>
     <div class="container">
       <a href="#" class="logo">
@@ -259,7 +348,6 @@
         <ul class="social-list">
           <li><a href="https://github.com/priyanshukansal15" class="social-link"><ion-icon name="logo-github"></ion-icon></a></li>
           <li><a href="https://www.linkedin.com/in/priyanshu-kansal-48b0b7193/" class="social-link"><ion-icon name="logo-linkedin"></ion-icon></a></li>
-          <!-- <li><a href="#"><i class="fa-brands fa-leetcode"></i></a></li> -->
         </ul>
       </nav>
 
@@ -274,7 +362,6 @@
   <main>
     <article>
 
-      <!-- HERO -->
       <section class="section hero" aria-label="home">
         <div class="container">
           <figure class="hero-banner">
@@ -298,7 +385,6 @@
         </div>
       </section>
 
-      <!-- ABOUT -->
       <section class="section about" aria-label="about" id="about">
         <div class="container">
           <div class="wrapper">
@@ -308,7 +394,6 @@
                 I am Priyanshu Kansal, a 4th-year B.Tech IT student at BPIT (affiliated with GGSIPU) with experience in AI/ML, web development, and robotics. I have worked on projects like violence detection systems, digital governance platforms, and smart IoT solutions.
               </p>
             </div>
-                <!-- Skills Progress (kept original design) -->
                 <ul class="progress-list" data-reveal="right">
                   <li class="progress-item">
                     <div class="label-wrapper"><p>Web Development</p><span class="span">85 %</span></div>
@@ -338,11 +423,9 @@
           </div>
         </div>
       </section>
-<!-- Experience Section -->
 <section class="section experience" id="experience" aria-label="experience">
   <div class="container">
 
-    <!-- Section Title -->
     <div data-reveal="top">
       <h2 class="h2 section-title">Experience</h2>
       <p class="section-text">
@@ -350,10 +433,8 @@
       </p>
     </div>
 
-    <!-- BEL Internship Card -->
     <div class="experience-card" data-reveal="bottom">
 
-      <!-- Card Content -->
       <div class="experience-text">
         <p class="card-tag">Machine Learning Intern</p>
         <h3 class="h4 card-title">Bharat Electronics Ltd.</h3>
@@ -372,7 +453,6 @@
         </a>
       </div>
 
-      <!-- Card Image -->
       <figure class="experience-image">
         <img src="./assets/images/bel-internship.avif" loading="lazy" alt="BEL Internship">
       </figure>
@@ -384,7 +464,6 @@
 
 
 
-<!-- PROJECTS -->
 <section class="section project" aria-labelledby="project-label" id="projects">
   <div class="container">
 
@@ -397,12 +476,8 @@
 
     <ul class="grid-list" style="display: flex; flex-direction: column; gap: 2rem; list-style: none; padding: 0;">
 
-      <!-- Violence Detection -->
-      
-
-      <!-- Urban Governance -->
       <li>
-        <div class="project-card">
+        <div class="project-card" data-reveal>
           <div class="card-content">
             <p class="card-tag green">Blockchain & GIS</p>
             <h3 class="h3 card-title">Urban Governance Platform</h3>
@@ -417,9 +492,8 @@
         </div>
       </li>
 
-      <!-- Waultz -->
       <li>
-        <div class="project-card">
+        <div class="project-card" data-reveal>
           <div class="card-content">
             <p class="card-tag pink">Blockchain & LegalTech</p>
             <h3 class="h3 card-title">Waultz</h3>
@@ -434,9 +508,8 @@
         </div>
       </li>
 
-      <!-- Malhaar -->
       <li>
-        <div class="project-card">
+        <div class="project-card" data-reveal>
           <div class="card-content">
             <p class="card-tag blue">Web Development</p>
             <h3 class="h3 card-title">Malhaar - College Fest Website</h3>
@@ -452,7 +525,7 @@
       </li>
 
       <li>
-        <div class="project-card">
+        <div class="project-card" data-reveal>
           <div class="card-content">
             <p class="card-tag violet">ML & AI</p>
             <h3 class="h3 card-title">Violence Detection System</h3>
@@ -467,9 +540,8 @@
         </div>
       </li>
 
-      <!-- FOREST -->
       <li>
-        <div class="project-card">
+        <div class="project-card" data-reveal>
           <div class="card-content">
             <p class="card-tag teal">Sustainable Tech</p>
             <h3 class="h3 card-title">FOREST</h3>
@@ -488,79 +560,54 @@
   </div>
 </section>
 
-<!-- <style>
-  .project-card {
-    background-color: #fff;
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-    transition: transform 0.3s, box-shadow 0.3s;
-    display: flex;
-    flex-direction: row;
-    align-items: stretch;
-    min-height: 370px;
-    cursor: pointer;
-  }
-  .project-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 15px 35px rgba(0,0,0,0.15);
-  }
-  .card-content {
-    flex: 1;
-    padding: 2rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-  .card-banner {
-    flex: 1;
-    min-width: 350px;
-    overflow: hidden;
-    position: relative;
-  }
-  .card-banner img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.3s;
-  }
-  .project-card:hover img {
-    transform: scale(1.05);
-  }
-  .card-tag {
-    font-weight: 600;
-    margin-bottom: 0.5rem;
-  }
-  .btn-text {
-    margin-top: 1rem;
-    font-weight: 600;
-    text-decoration: none;
-    display: inline-flex;
-    align-items: center;
-  }
-  .btn-text ion-icon {
-    margin-left: 0.5rem;
-  }
+<section class="section contact" id="contact" aria-labelledby="contact-label">
+  <div class="container">
+    <div class="contact-content">
+      <div data-reveal="left">
+        <h2 class="h2 section-title" id="contact-label">Get In Touch.</h2>
+        <p class="section-text">
+          Have a project in mind or just want to say hi? I'm always open to discussing new projects, creative ideas, or opportunities.
+        </p>
+        <ul class="contact-list">
+          <li class="contact-item">
+            <ion-icon name="mail-outline"></ion-icon>
+            <a href="mailto:priyanshukansal15@gmail.com" class="contact-link">priyanshukansal15@gmail.com</a>
+          </li>
+          <li class="contact-item">
+            <ion-icon name="call-outline"></ion-icon>
+            <a href="tel:+919289292542" class="contact-link">+91 9289292542</a>
+          </li>
+          <li class="contact-item">
+             <ion-icon name="location-outline"></ion-icon>
+            <address class="contact-link">Delhi, India</address>
+          </li>
+        </ul>
+      </div>
 
-  /* Accent colors */
-  .violet { color: #a07cc5; }
-  .green { color: #7cb798; }
-  .pink { color: #d16b86; }
-  .blue { color: #3f78e0; }
-  .teal { color: #42a678; }
-  
-</style>
- -->
+      <form action="https://formspree.io/f/xkgqjjpo" method="POST" class="contact-form" data-reveal="right">
+        <div class="input-wrapper">
+          <input type="text" name="name" placeholder="Name" required class="input-field">
+          <input type="email" name="email" placeholder="Email" required class="input-field">
+        </div>
+        <textarea name="message" placeholder="Message" required class="input-field"></textarea>
+        <div class="form-btn-wrapper">
+            <button type="submit" class="btn btn-primary">Send Message</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
 
-  <!-- FOOTER -->
+</article>
+</main>
+
+
   <footer class="footer">
     <div class="container">
       <p class="copyright">© 2025 Priyanshu Kansal. All rights reserved.</p>
       <ul class="social-list">
         <li><a href="https://github.com/priyanshukansal15" class="social-link"><ion-icon name="logo-github"></ion-icon></a></li>
         <li><a href="https://www.linkedin.com/in/priyanshu-kansal-48b0b7193/" class="social-link"><ion-icon name="logo-linkedin"></ion-icon></a></li>
-        <!-- <li><a href="#" class="social-link"><ion-icon name="logo-twitter"></ion-icon></a></li>
-        <li><a href="#" class="social-link"><ion-icon name="logo-instagram"></ion-icon></a></li> -->
       </ul>
     </div>
   </footer>
