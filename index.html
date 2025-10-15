@@ -168,7 +168,16 @@
   height: 100%;
   object-fit: cover;
 }
-
+.achievment-image {
+  flex: 0 0 350px;
+  overflow: hidden;
+}
+  
+.achievment-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 /* Responsive Experience Layout */
 @media (max-width: 992px) {
   .experience-card {
@@ -559,6 +568,62 @@
     </ul>
   </div>
 </section>
+<section class="section achievements" id="achievements" aria-label="achievements">
+  <div class="container">
+
+    <div data-reveal="top">
+      <h2 class="h2 section-title">Achievements</h2>
+      <p class="section-text">
+        Some of my key achievements that reflect dedication, teamwork, and a passion for innovation and problem-solving.
+      </p>
+    </div>
+
+    <!-- Research Paper Achievement -->
+    <div class="experience-card" data-reveal="bottom">
+      <div class="experience-text">
+        <p class="card-tag">Research Publication</p>
+        <h3 class="h4 card-title">Paper Published at ICAIN 2025</h3>
+        <p class="duration">October 2025</p>
+        <p class="card-text">
+          Published the research paper, <strong>“Urban Ecosystem Revolution: Integrating Nature's Wisdom with Automation for Sustainable City Living”</strong> at the <strong>International Conference on Artificial Intelligence and Networks (ICAIN 2025)</strong>, 
+      held at <strong>BITS Pilani, Dubai Campus</strong> in association with 
+      <strong>IIIT Allahabad</strong>. An extension of <strong>Project F.O.R.E.S.T.</strong>, the paper proposes a model to improve urban well-being by creating automated green spaces using Arduino, smart sensors, and piezoelectric energy. The paper will be published in the <strong>SCOPUS-indexed Springer LNNS series</strong>.
+        </p>
+        <a href="https://drive.google.com/file/d/18OjxXIL_dqFG9oyKdW8oCA6uSTFL3d11/view?usp=sharing" target="_blank" class="btn-text">
+          <span>View Certificate</span>
+          <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
+        </a>
+      </div>
+      <figure class="achievement-image">
+        <img src="./assets/images/springer_scopus-320x191.png" loading="lazy" alt="Research Paper Presentation" >
+      </figure>
+    </div>
+
+    <!-- Updated Treasure Hunt Achievement -->
+    <div class="experience-card" data-reveal="bottom">
+      <div class="experience-text">
+        <p class="card-tag">Competition Achievement</p>
+        <h3 class="h4 card-title">Treasure Hunt – Kaizen 2024</h3>
+        <p class="duration">March 2024</p>
+        <p class="card-text">
+          Achieved <strong>1st Runner-Up position</strong> in the <strong>Treasure Hunt</strong> competition organized by <strong>NSS GGSIPU</strong> 
+          and <strong>NSS IIT Delhi</strong> under the event <strong>Kaizen 2024</strong>. 
+          The competition tested analytical thinking, teamwork, and real-time <strong>problem-solving skills</strong> 
+          as our team successfully completed multi-stage clue-based challenges among 60+ participating teams.
+        </p>
+        <a href="https://drive.google.com/file/d/1W1EQIn2F-WH5018FCOEcpOezKR-YFZjS/view?usp=sharing" target="_blank" class="btn-text">
+          <span>View Certificate</span>
+          <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
+        </a>
+      </div>
+      <figure class="experience-image">
+        <img src="./assets/images/kaizen.jpg" loading="lazy" alt="Treasure Hunt - Kaizen 2024 Event">
+      </figure>
+    </div>
+
+  </div>
+</section>
+
 
 <section class="section contact" id="contact" aria-labelledby="contact-label">
   <div class="container">
